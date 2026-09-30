@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Pravallika",
+        "branch": "CSE-AIML",
+        "year": 3,
+        "course": "Node.js"
+    },
+    {
+        "id": 2,
+        "name": "Anjali",
+        "branch": "CSE",
+        "year": 2,
+        "course": "Python"
+    },
+    {
+        "id": 3,
+        "name": "Rahul",
+        "branch": "IT",
+        "year": 3,
+        "course": "Node.js"
+    }
+]
