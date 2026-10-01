@@ -2,14 +2,16 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: "",
     email: "",
     password: "",
     phone: "",
     gender: "",
     course: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,6 +26,9 @@ function App() {
     alert("Registration Successful!");
 
     console.log(formData);
+
+    // Clear the form after submission
+    setFormData(initialFormData);
   };
 
   return (
@@ -88,6 +93,7 @@ function App() {
                 type="radio"
                 name="gender"
                 value="Male"
+                checked={formData.gender === "Male"}
                 onChange={handleChange}
                 required
               />
@@ -99,6 +105,7 @@ function App() {
                 type="radio"
                 name="gender"
                 value="Female"
+                checked={formData.gender === "Female"}
                 onChange={handleChange}
               />
               Female
@@ -109,6 +116,7 @@ function App() {
                 type="radio"
                 name="gender"
                 value="Other"
+                checked={formData.gender === "Other"}
                 onChange={handleChange}
               />
               Other
@@ -128,8 +136,12 @@ function App() {
             <option value="">Select your course</option>
             <option value="CSE">Computer Science Engineering</option>
             <option value="AI-ML">CSE (AI & ML)</option>
-            <option value="ECE">Electronics & Communication</option>
-            <option value="EEE">Electrical & Electronics</option>
+            <option value="ECE">
+              Electronics & Communication
+            </option>
+            <option value="EEE">
+              Electrical & Electronics
+            </option>
             <option value="MECH">Mechanical Engineering</option>
           </select>
         </div>
