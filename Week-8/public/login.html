@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Passenger Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+
+        <h2>BUS TICKET BOOKING SYSTEM</h2>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/register">
+                Register
+            </a>
+
+            <a href="/login">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Login Form -->
+    <div class="container login-container">
+
+        <h1>Passenger Login</h1>
+
+        <p>
+            Login to book your bus ticket.
+        </p>
+
+
+        <form action="/login" method="POST">
+
+            <label>Username or Email</label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter username or email"
+                required
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <p class="bottom-text">
+
+            Don't have an account?
+
+            <a href="/register">
+                Register here
+            </a>
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>
